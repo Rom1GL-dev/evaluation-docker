@@ -19,12 +19,17 @@ Le back est réalisé avec Nest JS
 
 ## Lancer le projet
 Démarrer pour le developpement
+
+- yarn start:dev
+- yarn stop:dev
 ```
  "start:dev": "docker compose --env-file env/.env.dev up --build",
  "stop:dev": "docker compose --env-file env/.env.dev down",
 ```
 
 Démarrer pour la production
+- yarn start:prod
+- yarn stop:prod
 ```
  "start:prod": "docker compose --env-file env/.env.prod up --build",
  "stop:prod": "docker compose --env-file env/.env.prod down"
