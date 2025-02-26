@@ -35,6 +35,12 @@ Démarrer pour la production
  "stop:prod": "docker compose --env-file env/.env.prod down"
 ```
 
+Pour accéder au front il faut aller : 
+http://localhost:3000
+
+Pour accéder a l'api il faut aller : 
+http://localhost:3001/users
+
 ## Workflows
 Il y a 2 workflows, 
 - notify = pour notifier via discord lors d'un push
