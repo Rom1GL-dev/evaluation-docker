@@ -1,0 +1,20 @@
+name: Notification discord
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  discord-notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Notification discord
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"content": "Un nouveau push a eu lieu sur le git"}' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
