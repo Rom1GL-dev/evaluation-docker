@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start:dev": "docker compose --env-file env/.env.dev up --build",
+    "install:project": "cd apps/api && npm install && npm run build && cd ../web && npm install && npm run build && cd ../../",
+    "start:dev": "yarn install:project && docker compose --env-file env/.env.dev up --build",
     "stop:dev": "docker compose --env-file env/.env.dev down",
     "start:prod": "docker compose --env-file env/.env.prod up --build",
     "stop:prod": "docker compose --env-file env/.env.prod down"

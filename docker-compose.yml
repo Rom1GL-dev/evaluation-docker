@@ -17,7 +17,7 @@ services:
       - db
   db:
     image: postgres:15
-    container_name: database
+    container_name: container-database
     restart: always
     ports:
       - "5432:5432"
@@ -31,7 +31,7 @@ services:
     build:
       context: .
       dockerfile: apps/web/Dockerfile
-    container_name: web
+    container_name: container-web
     ports:
       - "3000:4173"
     environment:
